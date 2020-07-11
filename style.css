@@ -1,0 +1,97 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root { --main-color: #972FFE; }
+
+html { font-size: 62.5%; }
+
+body {
+    font-size: 1.6rem;
+    font-family: sans-serif;
+    background-color: var(--main-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 2s;
+}
+
+#input {
+    padding: 1rem;
+    background-color: #fff;
+    height: 5.5rem;
+    width: 35rem;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0rem 2rem .8rem rgba(0, 0, 0, 0.123);
+    transition: .3s;
+}
+
+#input.active {
+    box-shadow: 0 1rem 3rem .7rem rgba(0, 0, 0, 0.336);
+}
+
+#input-text {
+    display: inline-block;
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    display: flex;
+    height: 100%;
+}
+
+.active > #input-cur { height: 100%; }
+
+#input-cur {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0;
+    margin-left: .4rem;
+    background-color: var(--main-color);
+    animation: cur-anm 1s linear infinite;
+    transition: background-color 2s;
+}
+
+.placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5rem;
+    font-family: 'Roboto Mono';
+    opacity: .1;
+    text-transform: uppercase;
+    color: var(--main-color);
+    transition: color 2s;
+}
+
+.letter {
+    transform: scale(.7);
+    animation: letter-scale .3s linear forwards;
+}
+
+.space {
+    display: inline-block;
+    width: 1.2rem;
+    height: 100%;
+}
+
+/* Cursor animation */
+
+@keyframes cur-anm {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Letters Animation */
+
+@keyframes letter-scale {
+    to { transform: scale(1); }
+}

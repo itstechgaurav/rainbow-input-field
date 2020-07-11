@@ -1,0 +1,13 @@
+{
+  "name": "rainbow-input-field",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://myselfgroot.github.io/rainbow-input-field",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d ./"
+  },
+  "author": "Gaurav Bhardwaj",
+  "license": "ISC"
+}
