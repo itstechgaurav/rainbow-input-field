@@ -18,9 +18,11 @@ const placeholder = document.querySelector('.placeholder');
 input.addEventListener('click', _ => {
     input.classList.add('active');
     isActive = true;
-    SetInterval = setInterval(_ => {
-        updateColor();
-    }, 1000)
+    window.requestAnimationFrame(_ => {
+        SetInterval = setInterval(_ => {
+            updateColor();
+        }, 1000);
+    })
 });
 
 body.addEventListener('click', _ => {
